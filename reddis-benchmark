@@ -1,0 +1,188 @@
+ # Executing redis-benchmark on single instance 
+ redis-benchmark -p 10001
+ 
+ 
+ #Results: 
+ 
+====== PING_INLINE ======
+  100000 requests completed in 0.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+105932.20 requests per second
+
+====== PING_BULK ======
+  100000 requests completed in 0.95 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+105152.48 requests per second
+
+====== SET ======
+  100000 requests completed in 0.95 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.99% <= 1 milliseconds
+100.00% <= 1 milliseconds
+104931.80 requests per second
+
+====== GET ======
+  100000 requests completed in 0.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+105820.11 requests per second
+
+====== INCR ======
+  100000 requests completed in 0.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+107758.62 requests per second
+
+====== LPUSH ======
+  100000 requests completed in 0.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+107181.13 requests per second
+
+====== RPUSH ======
+  100000 requests completed in 0.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.97% <= 1 milliseconds
+100.00% <= 1 milliseconds
+106837.61 requests per second
+
+====== LPOP ======
+  100000 requests completed in 0.95 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.95% <= 1 milliseconds
+99.98% <= 3 milliseconds
+99.99% <= 4 milliseconds
+100.00% <= 4 milliseconds
+105596.62 requests per second
+
+====== RPOP ======
+  100000 requests completed in 0.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.97% <= 1 milliseconds
+100.00% <= 1 milliseconds
+107066.38 requests per second
+
+====== SADD ======
+  100000 requests completed in 0.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+106157.12 requests per second
+
+====== HSET ======
+  100000 requests completed in 0.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+107181.13 requests per second
+
+====== SPOP ======
+  100000 requests completed in 0.95 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.98% <= 1 milliseconds
+100.00% <= 1 milliseconds
+105263.16 requests per second
+
+====== LPUSH (needed to benchmark LRANGE) ======
+  100000 requests completed in 0.93 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+100.00% <= 0 milliseconds
+107296.14 requests per second
+
+====== LRANGE_100 (first 100 elements) ======
+  100000 requests completed in 1.85 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.87% <= 1 milliseconds
+99.97% <= 2 milliseconds
+100.00% <= 2 milliseconds
+54112.55 requests per second
+
+====== LRANGE_300 (first 300 elements) ======
+  100000 requests completed in 4.44 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+11.26% <= 1 milliseconds
+99.97% <= 2 milliseconds
+100.00% <= 2 milliseconds
+22512.38 requests per second
+
+====== LRANGE_500 (first 450 elements) ======
+  100000 requests completed in 6.19 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.03% <= 1 milliseconds
+99.78% <= 2 milliseconds
+99.99% <= 3 milliseconds
+100.00% <= 3 milliseconds
+16165.54 requests per second
+
+====== LRANGE_600 (first 600 elements) ======
+  100000 requests completed in 7.91 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+0.01% <= 1 milliseconds
+55.55% <= 2 milliseconds
+99.83% <= 3 milliseconds
+99.94% <= 4 milliseconds
+100.00% <= 5 milliseconds
+100.00% <= 5 milliseconds
+12640.63 requests per second
+
+====== MSET (10 keys) ======
+  100000 requests completed in 0.94 seconds
+  50 parallel clients
+  3 bytes payload
+  keep alive: 1
+
+99.96% <= 1 milliseconds
+100.00% <= 1 milliseconds
+106044.54 requests per second
+
