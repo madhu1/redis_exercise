@@ -13,9 +13,7 @@ RUN #1] Preparing benchmark client...
 [RUN #1 86%,  10 secs]  4 threads:     1716030 ops,  158329 (avg:  156019) ops/sec, 6.56MB/sec (avg: 6.46MB/se
 [RUN #1 94%,  11 secs]  4 threads:     1874794 ops,  158711 (avg:  156244) ops/sec, 6.57MB/sec (avg: 6.47MB/se
 [RUN #1 100%,  12 secs]  0 threads:     2000000 ops,  158711 (avg:  156375) ops/sec, 6.57MB/sec (avg: 6.48MB/sec)
-  1.26 (avg:  1.28) msec latency
-  155962 ops,  156595 (avg:  156595) ops/sec, 6.49MB/sec (avg: 6.49MB/sec[RUN #1 16%,   1 secs]  4 threads:      312896 ops,  156894 (avg:  156745) ops/sec, 6.50MB/sec (avg: 6.49MB/se[RUN #1 23%,   2 secs]  4 threads:      469324 ops,  156375 (avg:  156621) ops/sec, 6.48MB/sec (avg: 6.49MB/se[RUN #1 31%,   3 secs]  4 threads:      625697 ops,  156333 (avg:  156549) ops/sec, 6.47MB/sec (avg: 6.49MB/se[RUN #1 39%,   4 secs]  4 threads:      781831 ops,  156083 (avg:  156456) ops/sec, 6.47MB/sec (avg: 6.48MB/se[RUN #1 47%,   5 secs]  4 threads:      937888 ops,  156004 (avg:  156380) ops/sec, 6.46MB/sec (avg: 6.48MB/se[RUN #1 55%,   6 secs]  4 threads:     1093772 ops,  155845 (avg:  156304) ops/sec, 6.45MB/sec (avg: 6.47MB/se[RUN #1 62%,   7 secs]  4 threads:     1249255 ops,  155442 (avg:  156196) ops/sec, 6.44MB/sec (avg: 6.47MB/se[RUN #1 70%,   8 secs]  4 threads:     1402611 ops,  153316 (avg:  155876) ops/sec, 6.35MB/sec (avg: 6.46MB/se[RUN #1 78%,   9 secs]  4 threads:     1557661 ops,  154997 (avg:  155788) ops/sec, 6.42MB/sec (avg: 6.45MB/se[RUN #1 86%,  10 secs]  4 threads:     1716030 ops,  158329 (avg:  156019) ops/sec, 6.56MB/sec (avg: 6.46MB/se[RUN #1 94%,  11 secs]  4 threads:     1874794 ops,  158711 (avg:  156244) ops/sec, 6.57MB/sec (avg: 6.47MB/se[RUN #1 100%,  12 secs]  0 threads:     2000000 ops,  158711 (avg:  156375) ops/sec, 6.57MB/sec (avg: 6.48MB/sec),  1.26 (avg:  1.28) msec latency
-
+ 
 4         Threads
 50        Connections per thread
 10000     Requests per client
