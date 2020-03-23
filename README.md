@@ -23,7 +23,9 @@ WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. Th
 1 Like the warning suggests, just add the line vm.overcommit_memory=1 to the bottom of /etc/sysctl.conf, with something like sudo vi /etc/sysctl.conf.
 2. But permissions don't allow you to edit THP as the warning suggests, so instead do
 sudo apt install hugepages and add the command sudo hugeadm --thp-never to the bottom of your .bashrc, with something like sudo vi ~/.bashrc.
-  
+ # [2] Memtier installation and Benchmarking 
+ 1. Installed using instructions from memtier redis link: https://github.com/RedisLabs/memtier_benchmark
+ 2. Ran the redis and memtier benchmark. Results in the file provided.   
  # [3] & [4] Installing Redis Enterprise GA On Machine 2, Create replica of Machine 1 redis DB on Machine 2
  Used the instruction from Redis Enterprise and follow them in the URL below to set up redis cluster
  https://docs.redislabs.com/latest/rs/getting-started/quick-setup/
