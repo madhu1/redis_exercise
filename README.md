@@ -38,8 +38,8 @@ $ sudo sed -i.bak '/ swap / s/^(.*)$/#1/g' /etc/fstab
 # [5] Insert into redis numbers 1-100 and return them in reverse order
 
 1. Python code to connect and insert numbers into redis
-2. Used list and used rpush and rpop to insert and retrieve the number 
-3. After use, delete the redis list so that next time new list is created.
+2. Used list and used rpush and rpop to insert and retrieve the numbers 
+3. After use, delete the redis list so that next time new list is created in the testing phase.
 
 
 
