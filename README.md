@@ -12,7 +12,7 @@ Insert values 1-100 into the Redis OSS server, and read and print them in a reve
 -------------------------------------------------------
 1. dir /var/lib/redis
 2. changed port from default to 10001
-3. Enable redis in the start -- <sudo systemctl enable redis>
+3. Enable redis in the start <sudo systemctl enable redis>
 4. To start/stop redis service <sudo systemctl status/start/stop redis>
 
 
