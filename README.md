@@ -14,17 +14,31 @@ Insert values 1-100 into the Redis OSS server, and read and print them in a reve
 2. changed port from default to 10001
 3. Enable redis in the start -- <sudo systemctl enable redis>
 4. To start/stop redis service <sudo systemctl status/start/stop redis>
+
+
 Seen warning like :
 WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
 WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
 1 Like the warning suggests, just add the line vm.overcommit_memory=1 to the bottom of /etc/sysctl.conf, with something like sudo vi /etc/sysctl.conf.
 2. But permissions don't allow you to edit THP as the warning suggests, so instead do
-sudo apt install hugepages
-and add the command sudo hugeadm --thp-never to the bottom of your .bashrc, with something like sudo vi ~/.bashrc.
+sudo apt install hugepages and add the command sudo hugeadm --thp-never to the bottom of your .bashrc, with something like sudo vi ~/.bashrc.
+  
+ # [3] & [4] Installing Redis Enterprise GA On Machine 2, Create replica of Machine 1 redis DB on Machine 2
+ 
+1. Disabling Swap 
+To disable the swap in the OS of an existing server/VM/instance, you must have sudo access or be root to run the following command:
+$ sudo swapoff -a
+$ sudo sed -i.bak '/ swap / s/^(.*)$/#1/g' /etc/fstab
+2. Easily set up redis cluster through URL <https://Machine2_publicIP:8443/ https://54.209.240.172:8443/>, set 3 shards, no DNS  
+3. In the set up, enabled Replica of  <redis://privateIP_source:PORT> <<redis://172.31.19.17:10001>>  
+4. To access redis-cli -h 172.31.26.19 -p 19797
 
-# [2] Installation of Memtier BenchMark and Loading Redis
------------------------------------------------------------
-Cloned memtier benchmark from https://github.com/RedisLabs/memtier_benchmark.git and installed it using instruction. 
-Missing dependency libssl was fixed using <sudo apt install --reinstall libssl1.1=1.1.0g-2ubuntu4> <sudo apt install libssl-dev>
+# [5] Insert into redis numbers 1-100 and return them in reverse order
+
+1. Python code to connect and insert numbers into redis
+2. Used list and used rpush and rpop to insert and retrieve the number 
+3. After use, delete the redis list so that next time new list is created.
+
+
 
 
