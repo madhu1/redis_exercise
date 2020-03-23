@@ -10,11 +10,12 @@ Insert values 1-100 into the Redis OSS server, and read and print them in a reve
 
 # [1] Installation and Configuration of Single Instance
 -------------------------------------------------------
+Main step is to download redis installation tar file and extract it. THen set the following configuration. Refer: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
 1. dir /var/lib/redis
 2. changed port from default to 10001
 3. Enable redis in the start <sudo systemctl enable redis>
 4. To start/stop redis service <sudo systemctl status/start/stop redis>
-
+5. simple test in the link to check commands on redis-cli  
 
 Seen warning like :
 WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
@@ -24,7 +25,8 @@ WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. Th
 sudo apt install hugepages and add the command sudo hugeadm --thp-never to the bottom of your .bashrc, with something like sudo vi ~/.bashrc.
   
  # [3] & [4] Installing Redis Enterprise GA On Machine 2, Create replica of Machine 1 redis DB on Machine 2
- 
+ Used the instruction from Redis Enterprise and follow them in the URL below to set up redis cluster
+ https://docs.redislabs.com/latest/rs/getting-started/quick-setup/
 1. Disabling Swap 
 To disable the swap in the OS of an existing server/VM/instance, you must have sudo access or be root to run the following command:
 $ sudo swapoff -a
